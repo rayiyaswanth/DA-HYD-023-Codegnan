@@ -43,3 +43,12 @@ for i in movies:
     print(i,movies)
     i+=1
 '''    
+#fiboncci series
+'''
+n=int(input('enter the value : '))
+a,b=0,1
+for i in range(n):
+  print(a,end=" ")
+  c=a+b
+  a=b
+  b=c
