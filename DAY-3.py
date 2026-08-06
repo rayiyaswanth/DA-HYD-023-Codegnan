@@ -1,7 +1,7 @@
 # numeric Datatype --> int,float, complex along with boolean
 # Input formatting --> Accepting input from the user  -> input()
 
-# First Accepting integer input from user
+# First Accepting integer input from user ->
 '''
 age = input('Enter the age : ') # by defalut input() accepts any input as String.
 print(age)
