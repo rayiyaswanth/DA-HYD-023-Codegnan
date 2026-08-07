@@ -3,7 +3,7 @@ conditional Statements -> control of flow of execution of the program
                        -> conditional Statements -> if,elif,else..
                        -> Repetition Statements(Loops) -> for,While (for with else)(While with else).
 
-                       -> Jumping Statements -> break,continue,pass
+                       -> Jumping Statements -> break,continue,pass.
 
 '''
 #Loops -> this are helpful for repetition (Automative tasks)
