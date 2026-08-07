@@ -1,4 +1,5 @@
 '''
+# about student marks
 marks=int(input("enter the  marks(1-100):"))
 if marks>=0 and marks<=100:
     if marks>=90: 
