@@ -1,5 +1,5 @@
 '''
-Identity Operatiors -> checks the identity of an object ->id().
+Identity Operatiors -> checks the identity of an object -->id().
 
 a=5
 b=a
