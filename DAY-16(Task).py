@@ -68,7 +68,7 @@ print(details.get("CS"))#it returns none as we dont have CS as key
 print(details.keys())
 #details.setdefault("Phone No","Portal")#if key is not present it inserts into dict
 #print(details)
-#details{"Phone No" = "7569591568","Portal" = "codegnan"}
+#details{"Phone No" = "9000959435","Portal" = "codegnan"}
 #print(details)
 print(details.pop("place"))#we need to mention key
 print(details)
