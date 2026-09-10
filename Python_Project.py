@@ -1,26 +1,11 @@
-# ============================================================
 # PROJECT 25: PLACEMENT READINESS AND STUDENT PROGRESS
 # MANAGEMENT SYSTEM
-# ============================================================
-
-# ------------------------------------------------------------
-# BASIC MODULES
-# ------------------------------------------------------------
-
 import os
 from datetime import datetime
-
-
-# ============================================================
 # CONSTANTS
-# ============================================================
-
 DATA_FILE = "students.txt"
 
-
-# ============================================================
 # BASE CLASS - PERSON
-# ============================================================
 
 class Person:
     """
@@ -38,9 +23,7 @@ class Person:
         print("Phone      :", self.phone)
 
 
-# ============================================================
 # STUDENT CLASS
-# ============================================================
 
 class Student(Person):
     """
@@ -95,9 +78,8 @@ class Student(Person):
 
         Student.total_students += 1
 
-    # --------------------------------------------------------
-    # PROPERTY - GET STUDENT ID
-    # --------------------------------------------------------
+
+# PROPERTY - GET STUDENT ID
 
     def get_student_id(self):
         return self.__student_id
@@ -147,9 +129,7 @@ class Student(Person):
             elif key == "mock_interview":
                 self.mock_interview = value
 
-    # --------------------------------------------------------
     # STATIC METHOD
-    # --------------------------------------------------------
 
     @staticmethod
     def validate_score(score):
@@ -167,9 +147,7 @@ class Student(Person):
     def get_total_students(cls):
         return cls.total_students
 
-    # --------------------------------------------------------
-    # AVERAGE TECHNICAL SCORE
-    # --------------------------------------------------------
+# AVERAGE TECHNICAL SCORE
 
     def technical_average(self):
 
@@ -182,9 +160,7 @@ class Student(Person):
 
         return sum(scores) / len(scores)
 
-    # --------------------------------------------------------
-    # PERFORMANCE CATEGORY
-    # --------------------------------------------------------
+# PERFORMANCE CATEGORY
 
     def performance_category(self):
 
@@ -202,9 +178,8 @@ class Student(Person):
         else:
             return "Needs Improvement"
 
-    # --------------------------------------------------------
-    # PROJECT SCORE
-    # --------------------------------------------------------
+
+# PROJECT SCORE
 
     def project_score(self):
 
@@ -213,9 +188,8 @@ class Student(Person):
         else:
             return 0
 
-    # --------------------------------------------------------
-    # PRACTICE SCORE
-    # --------------------------------------------------------
+
+# PRACTICE SCORE
 
     def practice_score(self):
 
@@ -234,9 +208,7 @@ class Student(Person):
         else:
             return 20
 
-    # --------------------------------------------------------
     # MOCK INTERVIEW SCORE
-    # --------------------------------------------------------
 
     def mock_interview_score(self):
 
@@ -254,9 +226,7 @@ class Student(Person):
         else:
             return 0
 
-    # --------------------------------------------------------
-    # OVERALL PROGRESS
-    # --------------------------------------------------------
+ # OVERALL PROGRESS
 
     def overall_progress(self):
 
@@ -279,10 +249,8 @@ class Student(Person):
         ) / 5
 
         return round(overall, 2)
-
-    # --------------------------------------------------------
-    # PLACEMENT ELIGIBILITY
-    # --------------------------------------------------------
+        
+# PLACEMENT ELIGIBILITY
 
     def placement_eligibility(self):
 
@@ -299,9 +267,7 @@ class Student(Person):
 
         return "Not Eligible"
 
-    # --------------------------------------------------------
     # DETAILS METHOD
-    # --------------------------------------------------------
 
     def details(self):
 
@@ -334,9 +300,8 @@ class Student(Person):
 
         print("---------------------------------------------")
 
-    # --------------------------------------------------------
-    # *args EXAMPLE
-    # --------------------------------------------------------
+# *args EXAMPLE
+
 
     def calculate_total(self, *scores):
 
@@ -345,10 +310,7 @@ class Student(Person):
 
         return sum(scores)
 
-
-# ============================================================
 # ADVANCED STUDENT CLASS
-# ============================================================
 
 class AdvancedStudent(Student):
     """
@@ -373,9 +335,8 @@ class AdvancedStudent(Student):
         print("=============================================")
 
 
-# ============================================================
+
 # BATCH CLASS
-# ============================================================
 
 class Batch:
 
@@ -403,10 +364,7 @@ class Batch:
                 student.name
             )
 
-
-# ============================================================
 # MANAGEMENT SYSTEM CLASS
-# ============================================================
 
 class PlacementManagementSystem:
 
@@ -415,9 +373,7 @@ class PlacementManagementSystem:
         self.students = {}
         self.batches = {}
 
-    # ========================================================
     # STUDENT REGISTRATION
-    # ========================================================
 
     def register_student(self):
 
@@ -457,9 +413,7 @@ class PlacementManagementSystem:
 
         print("\nStudent registered successfully!")
 
-    # ========================================================
-    # BATCH MANAGEMENT
-    # ========================================================
+ # BATCH MANAGEMENT
 
     def create_batch(self):
 
@@ -491,10 +445,8 @@ class PlacementManagementSystem:
         for batch in self.batches.values():
             batch.display_batch()
 
-    # ========================================================
-    # SEARCH STUDENT
-    # ========================================================
-
+# SEARCH STUDENT
+    
     def search_student(self):
 
         print("\n========== SEARCH STUDENT ==========")
@@ -518,9 +470,7 @@ class PlacementManagementSystem:
         if not found:
             print("Student not found.")
 
-    # ========================================================
     # FIND STUDENT
-    # ========================================================
 
     def get_student(self):
 
@@ -534,10 +484,7 @@ class PlacementManagementSystem:
 
         return self.students[student_id]
 
-    # ========================================================
     # ATTENDANCE TRACKING
-    # ========================================================
-
     def update_attendance(self):
 
         print("\n========== ATTENDANCE TRACKING ==========")
@@ -567,9 +514,7 @@ class PlacementManagementSystem:
 
             print("Please enter a valid number.")
 
-    # ========================================================
     # TECHNICAL ASSESSMENT SCORES
-    # ========================================================
 
     def update_scores(self):
 
@@ -628,9 +573,7 @@ class PlacementManagementSystem:
 
             print("Please enter valid numbers.")
 
-    # ========================================================
     # PROJECT STATUS
-    # ========================================================
 
     def update_project(self):
 
@@ -661,9 +604,7 @@ class PlacementManagementSystem:
 
         print("Project status updated.")
 
-    # ========================================================
     # PRACTICE SESSION TRACKING
-    # ========================================================
 
     def update_practice(self):
 
@@ -694,9 +635,7 @@ class PlacementManagementSystem:
 
             print("Enter a valid number.")
 
-    # ========================================================
     # MOCK INTERVIEW
-    # ========================================================
 
     def update_mock_interview(self):
 
@@ -731,9 +670,7 @@ class PlacementManagementSystem:
 
             print("Invalid choice.")
 
-    # ========================================================
-    # DISPLAY ALL STUDENTS
-    # ========================================================
+# DISPLAY ALL STUDENTS
 
     def display_all_students(self):
 
@@ -749,9 +686,7 @@ class PlacementManagementSystem:
 
             student.details()
 
-    # ========================================================
-    # TOP PERFORMERS
-    # ========================================================
+# TOP PERFORMERS
 
     def top_performers(self):
 
@@ -785,9 +720,7 @@ class PlacementManagementSystem:
                 "%"
             )
 
-    # ========================================================
-    # STUDENTS NEEDING IMPROVEMENT
-    # ========================================================
+# STUDENTS NEEDING IMPROVEMENT
 
     def students_needing_improvement(self):
 
@@ -817,10 +750,8 @@ class PlacementManagementSystem:
             print(
                 "No students currently need improvement."
             )
-
-    # ========================================================
-    # PLACEMENT ELIGIBILITY
-    # ========================================================
+            
+# PLACEMENT ELIGIBILITY
 
     def placement_eligible_students(self):
 
@@ -846,9 +777,7 @@ class PlacementManagementSystem:
 
             print("No eligible students found.")
 
-    # ========================================================
-    # OVERALL PROGRESS REPORT
-    # ========================================================
+# OVERALL PROGRESS REPORT
 
     def progress_report(self):
 
@@ -873,9 +802,8 @@ class PlacementManagementSystem:
                 student.performance_category()
             )
 
-    # ========================================================
-    # TXT FILE STORAGE
-    # ========================================================
+# TXT FILE STORAGE
+
 
     def save_to_file(self):
 
@@ -909,9 +837,7 @@ class PlacementManagementSystem:
 
             print("Error while saving data:", error)
 
-    # ========================================================
-    # LOAD FROM TXT FILE
-    # ========================================================
+# LOAD FROM TXT FILE
 
     def load_from_file(self):
 
@@ -972,9 +898,7 @@ class PlacementManagementSystem:
 
             print("Error while loading data:", error)
 
-    # ========================================================
-    # SAMPLE DATA
-    # ========================================================
+# SAMPLE DATA
 
     def add_sample_data(self):
 
@@ -1048,9 +972,7 @@ class PlacementManagementSystem:
 
         self.batches["DA-HYD-024"].add_student(student3)
 
-    # ========================================================
     # MAIN MENU
-    # ========================================================
 
     def menu(self):
 
@@ -1085,9 +1007,7 @@ class PlacementManagementSystem:
                 "Enter your choice: "
             ).strip()
 
-            # ------------------------------------------------
             # MENU OPTIONS
-            # ------------------------------------------------
 
             if choice == "1":
 
@@ -1173,9 +1093,7 @@ class PlacementManagementSystem:
                 )
 
 
-# ============================================================
 # MAIN PROGRAM
-# ============================================================
 
 def main():
 
@@ -1196,9 +1114,6 @@ def main():
     # Start menu
     system.menu()
 
-
-# ============================================================
-# PROGRAM START
 # ============================================================
 
 if __name__ == "__main__":
